@@ -1,0 +1,80 @@
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocation</title>
+</head>
+
+<body>
+    <p>Click the button to get your coordinates.</p>
+    <p id="demo"></p>
+
+    <input type="button" value="Send GPS to Swift" onClick="startBroadCastGPS()" />
+    <input type="button" value="Stop GPS" onClick="stopBroadCastGPS()" />
+
+    <script>
+        var x = document.getElementById("demo");
+        var timerVar;
+
+        function startBroadCastGPS() {
+            timerVar = setInterval(function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+
+            }, 2000);
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            x.innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+
+            // Send data to native
+            try {
+                var message = {
+                    latitude: latitude,
+                    longitude: longitude
+                };
+
+                // customCallbackHandlerStart
+                webkit.messageHandlers.customCallbackHandlerStart.postMessage(message);
+            } catch (err) {
+                console.log('The native context does not exist yet');
+            }
+        }
+
+        function stopBroadCastGPS() {
+            try {
+                // customCallbackHandlerStop
+                webkit.messageHandlers.customCallbackHandlerStop.postMessage("Stop");
+            } catch (err) {
+                console.log('The native context does not exist yet');
+            }
+            clearInterval(timerVar);
+        }
+
+        function swiftEventHandler() {
+            document.querySelector('p').style.color = "red";
+        }
+
+        function recieveEventFromSwift() {
+            if (document.querySelector('p').style.color == "blue") {
+                document.querySelector('p').style.color = "BlueViolet";
+            } else {
+                document.querySelector('p').style.color = "blue";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

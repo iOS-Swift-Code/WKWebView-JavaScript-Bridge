@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		EB08C3D420DCAB2000A6AAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08C3D320DCAB2000A6AAAD /* AppDelegate.swift */; };
-		EB08C3D620DCAB2000A6AAAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08C3D520DCAB2000A6AAAD /* ViewController.swift */; };
 		EB08C3D920DCAB2000A6AAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08C3D720DCAB2000A6AAAD /* Main.storyboard */; };
 		EB08C3DB20DCAB2000A6AAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB08C3DA20DCAB2000A6AAAD /* Assets.xcassets */; };
 		EB08C3DE20DCAB2000A6AAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08C3DC20DCAB2000A6AAAD /* LaunchScreen.storyboard */; };
+		EB08C3E720DCABA000A6AAAD /* js_send_location_to_native.html in Resources */ = {isa = PBXBuildFile; fileRef = EB08C3E620DCABA000A6AAAD /* js_send_location_to_native.html */; };
+		EB08C3E920DCABB800A6AAAD /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08C3E820DCABB800A6AAAD /* WebKitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB08C3D020DCAB2000A6AAAD /* WKWebViewJavaScriptBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebViewJavaScriptBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB08C3D320DCAB2000A6AAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB08C3D520DCAB2000A6AAAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB08C3D820DCAB2000A6AAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB08C3DA20DCAB2000A6AAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB08C3DD20DCAB2000A6AAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB08C3DF20DCAB2000A6AAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB08C3E620DCABA000A6AAAD /* js_send_location_to_native.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = js_send_location_to_native.html; sourceTree = "<group>"; };
+		EB08C3E820DCABB800A6AAAD /* WebKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		EB08C3D220DCAB2000A6AAAD /* WKWebViewJavaScriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				EB08C3D320DCAB2000A6AAAD /* AppDelegate.swift */,
-				EB08C3D520DCAB2000A6AAAD /* ViewController.swift */,
+				EB08C3E520DCAB6100A6AAAD /* Supporting Files */,
+				EB08C3E620DCABA000A6AAAD /* js_send_location_to_native.html */,
+				EB08C3E820DCABB800A6AAAD /* WebKitViewController.swift */,
 				EB08C3D720DCAB2000A6AAAD /* Main.storyboard */,
+			);
+			path = WKWebViewJavaScriptBridge;
+			sourceTree = "<group>";
+		};
+		EB08C3E520DCAB6100A6AAAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB08C3D320DCAB2000A6AAAD /* AppDelegate.swift */,
 				EB08C3DA20DCAB2000A6AAAD /* Assets.xcassets */,
 				EB08C3DC20DCAB2000A6AAAD /* LaunchScreen.storyboard */,
 				EB08C3DF20DCAB2000A6AAAD /* Info.plist */,
 			);
-			path = WKWebViewJavaScriptBridge;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB08C3E720DCABA000A6AAAD /* js_send_location_to_native.html in Resources */,
 				EB08C3DE20DCAB2000A6AAAD /* LaunchScreen.storyboard in Resources */,
 				EB08C3DB20DCAB2000A6AAAD /* Assets.xcassets in Resources */,
 				EB08C3D920DCAB2000A6AAAD /* Main.storyboard in Resources */,
@@ -135,8 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB08C3D620DCAB2000A6AAAD /* ViewController.swift in Sources */,
 				EB08C3D420DCAB2000A6AAAD /* AppDelegate.swift in Sources */,
+				EB08C3E920DCABB800A6AAAD /* WebKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WKWebViewJavaScriptBridge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WKWebViewJavaScriptBridge/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WKWebViewJavaScriptBridge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WKWebViewJavaScriptBridge/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
