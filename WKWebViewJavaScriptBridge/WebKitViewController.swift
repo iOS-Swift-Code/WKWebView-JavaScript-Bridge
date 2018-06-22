@@ -1,10 +1,12 @@
 //
 //  WebKitViewController.swift
-//  GeolocationApp
+//  WKWebViewJavaScriptBridge
 //
 //  Created by KP on 19/06/2018.
 //  Copyright © 2018 KP. All rights reserved.
 //
+
+// Reference: https://spin.atomicobject.com/2016/09/01/sharing-web-data-wkwebview/
 
 import UIKit
 import WebKit
