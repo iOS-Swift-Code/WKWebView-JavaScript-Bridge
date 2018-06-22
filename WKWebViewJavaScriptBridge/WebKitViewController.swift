@@ -47,7 +47,7 @@ class WebKitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "js_send_location_to_native", ofType: "html")
+        let path = Bundle.main.path(forResource: "index", ofType: "html")
         let url = URL(fileURLWithPath: path!)
         let req = URLRequest(url: url)
         locationWebView.load(req)
